@@ -1,1 +1,36 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Über mich – Deine Planerin</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    Deine Planerin für alle Fälle
+  </header>
+
+  <nav>
+    <a href="index.html">Über mich</a>
+    <a href="angebote.html">Was ich anbiete</a>
+    <a href="preise.html">Preise</a>
+    <a href="kontakt.html">Kontakt</a>
+  </nav>
+
+  <section>
+    <h2>Über mich</h2>
+    <p>
+      Nadine S., 33 Jahre, verheiratet, Mutter und Erzieherin. Ich wohne in Witzenhausen und bin verantwortlich für Planung und Feste in meinem Beruf.
+    </p>
+    <p>
+      Planen und Organisieren sind meine Leidenschaft – sowohl beruflich als auch privat. Ich arbeite präzise, strukturiert und detailgetreu. Diese Begeisterung spürt man in allem, was ich mache.
+    </p>
+  </section>
+
+  <footer>
+    &copy; 2025 Deine Planerin für alle Fälle
+  </footer>
+</body>
+</html>
 

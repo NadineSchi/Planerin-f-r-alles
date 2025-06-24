@@ -3,96 +3,255 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Deine Planerin für alle Fälle – Über mich</title>
+  <title>Deine Planerin für alle Fälle</title>
   <style>
+    /* Grundlayout */
     body {
+      margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background: #faf7fc;
-      margin: 0; padding: 0;
-      color: #3a2a59;
+      color: #4a3f67;
+      line-height: 1.6;
+      padding-bottom: 40px;
     }
-    header, nav, footer {
-      background-color: #7f5fa3;
-      color: white;
-      text-align: center;
-      padding: 1.5rem 1rem;
-      box-shadow: 0 3px 8px rgba(127,95,163,0.3);
-    }
-    nav {
-      background: #d9c7f0;
-      padding: 1rem 0;
-      box-shadow: inset 0 -2px 4px rgba(127,95,163,0.15);
-    }
-    nav a {
-      color: #4a2f7b;
-      margin: 0 1.25rem;
-      font-weight: 600;
+    a {
+      color: #7f5fa3;
       text-decoration: none;
       transition: color 0.3s ease;
     }
-    nav a:hover {
-      color: #a87dfd;
+    a:hover {
+      color: #a084c9;
     }
-    main {
-      max-width: 900px;
-      margin: 2rem auto;
-      background: white;
-      border-radius: 15px;
-      padding: 2rem 2.5rem;
-      box-shadow: 0 0 15px rgba(127, 95, 163, 0.2);
+
+    /* Header */
+    header {
+      background: linear-gradient(135deg, #7f5fa3, #a084c9);
+      color: #fff;
+      text-align: center;
+      padding: 3rem 1rem 4rem;
+      position: relative;
+      overflow: hidden;
     }
-    h1 {
+    header h1 {
+      margin-bottom: 0.5rem;
+      font-size: 2.8rem;
       font-weight: 700;
-      color: #5c3b8b;
-      margin-bottom: 0.2rem;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
     }
-    p {
-      line-height: 1.6;
-      font-size: 1.1rem;
-      margin-bottom: 1.2rem;
+    header p {
+      font-size: 1.3rem;
+      font-weight: 300;
+      max-width: 600px;
+      margin: 0 auto;
+      text-shadow: 0 0 3px rgba(0,0,0,0.15);
     }
-    footer p {
-      font-size: 0.9rem;
-      color: #9c85be;
-      margin: 0;
-    }
-    /* Dekorative Blumenranken als SVG oben */
+
+    /* Blumenranken SVG im Header */
     header::before {
       content: "";
-      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
       width: 100%;
-      height: 60px;
-      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 20" fill="%23e0d6f7"><path d="M0 10 Q 50 0, 100 10 T 200 10" stroke="%23a87dfd" stroke-width="2" fill="none"/></svg>');
+      height: 100px;
       background-repeat: no-repeat;
-      background-position: center bottom;
+      background-position: center;
+      background-size: contain;
+      opacity: 0.15;
+      pointer-events: none;
+      background-image: url('data:image/svg+xml;utf8,<svg fill="%23fff" height="100" viewBox="0 0 120 40" xmlns="http://www.w3.org/2000/svg"><path d="M10 30 Q 25 10, 50 30 T 110 30" stroke="white" stroke-width="2" fill="none"/></svg>');
+    }
+
+    /* Navigation */
+    nav {
+      background: #d6c8ea;
+      display: flex;
+      justify-content: center;
+      gap: 2.5rem;
+      padding: 1rem 0;
+      box-shadow: 0 2px 6px rgba(127, 95, 163, 0.25);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    nav a {
+      font-weight: 600;
+      font-size: 1.1rem;
+      color: #4a3f67;
+      padding: 0.3rem 0.8rem;
+      border-radius: 6px;
+      background: transparent;
+      box-shadow: inset 0 0 0 0 transparent;
+      transition: all 0.3s ease;
+    }
+    nav a:hover,
+    nav a:focus {
+      background: #7f5fa3;
+      color: white;
+      box-shadow: inset 0 -4px 0 #a084c9;
+    }
+
+    /* Sektionen */
+    section {
+      background: #fff;
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2.5rem 2.5rem 3rem;
+      border-radius: 15px;
+      box-shadow: 0 0 25px rgba(127, 95, 163, 0.15);
+      border: 2px solid #b9a8d8;
+    }
+
+    section h2 {
+      color: #7f5fa3;
+      border-bottom: 3px solid #a084c9;
+      padding-bottom: 10px;
+      margin-bottom: 1.8rem;
+      font-weight: 700;
+      font-size: 2rem;
+    }
+
+    /* Über mich Startseite */
+    #ueber p {
+      font-size: 1.15rem;
+      max-width: 700px;
+      margin: 0 auto;
+      white-space: pre-line; /* für Zeilenumbrüche */
+    }
+
+    /* Angebote */
+    .angebot {
+      margin-bottom: 1.8rem;
+    }
+    .angebot strong, .angebot h3 {
+      color: #6b4b9a;
+      font-weight: 700;
+      font-size: 1.2rem;
+    }
+    .angebot p, .angebot ul {
+      margin-left: 1rem;
+      color: #4a3f67;
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+    .angebot ul {
+      list-style: disc inside;
+      margin-top: 0.4rem;
+    }
+
+    /* Preise */
+    #preise p, #preise ul {
+      font-size: 1rem;
+      color: #4a3f67;
       margin-bottom: 1rem;
-      opacity: 0.3;
+    }
+    #preise ul {
+      list-style: disc inside;
+    }
+
+    /* Kontakt */
+    #kontakt p {
+      max-width: 700px;
+      margin-bottom: 1.2rem;
+      font-size: 1.1rem;
+      color: #4a3f67;
+    }
+    form {
+      max-width: 600px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    label {
+      font-weight: 600;
+      color: #7f5fa3;
+    }
+    input, textarea {
+      padding: 10px 15px;
+      border: 2px solid #b9a8d8;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-family: inherit;
+      transition: border-color 0.3s ease;
+      resize: vertical;
+    }
+    input:focus, textarea:focus {
+      border-color: #7f5fa3;
+      outline: none;
+      box-shadow: 0 0 8px #a084c9aa;
+    }
+    button {
+      background: #7f5fa3;
+      color: white;
+      font-size: 1.2rem;
+      font-weight: 700;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-top: 0.5rem;
+    }
+    button:hover, button:focus {
+      background: #a084c9;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 1rem 1rem;
+      color: #6b4b9a;
+      background: #f4f0fa;
+      font-size: 0.9rem;
+      margin-top: 3rem;
+      border-top: 2px solid #b9a8d8;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      section {
+        margin: 1rem 1rem 2rem;
+        padding: 2rem 1.5rem 2.5rem;
+      }
+      nav {
+        gap: 1rem;
+      }
     }
   </style>
 </head>
 <body>
+
   <header>
-    <h1>Hallo, ich bin Nadine S.</h1>
-    <p>Deine Planerin mit Herz, Struktur & Leidenschaft</p>
+    <h1>Deine Planerin für alle Fälle</h1>
+    <p>Ich plane – du genießt. Ob Event, Text oder Design: Alles aus einer Hand.</p>
   </header>
 
   <nav>
-    <a href="index.html">Über mich</a>
-    <a href="angebote.html">Was ich anbiete</a>
-    <a href="preise.html">Preise</a>
-    <a href="kontakt.html">Kontakt</a>
+    <a href="#ueber">Über mich</a>
+    <a href="#angebote">Was ich anbiete</a>
+    <a href="#preise">Preise & Pakete</a>
+    <a href="#kontakt">Kontakt</a>
   </nav>
 
-  <main>
+  <section id="ueber">
     <h2>Über mich</h2>
-    <p>Ich bin 33 Jahre alt, verheiratet, Mutter und als Erzieherin zuständig für Planung und Organisation von Festen und Projekten – eine Aufgabe, die ich mit großer Leidenschaft ausfülle.</p>
-    <p>Planen und Organisieren ist für mich weit mehr als nur ein Job: Es ist eine Berufung, die ich mit Herz, Struktur und einem Auge fürs Detail lebe. Mit Präzision und Begeisterung gestalte ich Abläufe und Veranstaltungen, die Spaß machen und reibungslos funktionieren.</p>
-    <p>Auch privat liebe ich es, Dinge klar und übersichtlich zu ordnen und kreativ zu gestalten – immer mit dem Ziel, dass alles einfach und stressfrei gelingt.</p>
-    <p>Ich freue mich darauf, deine Projekte mit professioneller Planung und echter Begeisterung zu unterstützen!</p>
-  </main>
+    <p>
+      Hallo, ich bin Nadine S., 33 Jahre alt, verheiratet und stolze Mutter. Ich wohne in Witzenhausen und arbeite als Erzieherin, wo ich für Planung und Organisation von Festen und Projekten verantwortlich bin.<br><br>
+      Planen und Organisieren ist nicht nur mein Beruf – es ist meine Leidenschaft. Ich liebe es, Dinge präzise, strukturiert und detailgetreu zu gestalten. Diese Begeisterung und Leidenschaft möchte ich mit dir teilen.  
+      Ob große Feier, ein kreatives Projekt oder ein übersichtlicher Plan – ich bringe Herz und Verstand in jede Aufgabe, damit du dich entspannt zurücklehnen kannst.
+    </p>
+  </section>
 
-  <footer>
-    <p>&copy; 2025 Nadine S. – Deine Planerin für alle Fälle</p>
-  </footer>
-</body>
-</html>
+  <section id="angebote">
+    <h2>Was ich anbiete</h2>
+
+    <div class="angebot">
+      <h3>1. Content-Planung & Textservice</h3>
+      <p>Ich unterstütze dich bei der Planung und Erstellung von Texten auf Deutsch und Englisch. Dazu gehören:</p>
+      <ul>
+        <li>Individuelle Redaktions- und Social-Media-Pläne</li>
+        <li>Blog-

@@ -8,245 +8,189 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #faf7fc; /* sehr helles Flieder */
+      background: #faf7fc;
       color: #333;
-      line-height: 1.6;
     }
     header, footer {
-      background-color: #6a4f8f; /* edles dunkles Lila */
+      background-color: #6a4f8f;
       color: white;
-      padding: 1.5rem 0;
+      padding: 1.5rem 2rem;
       text-align: center;
       position: relative;
       overflow: hidden;
     }
-    /* Blumenranken als SVG-Hintergrund im Header & Footer */
     header::before, footer::before {
       content: "";
       position: absolute;
       width: 100%;
       height: 80px;
       left: 0;
-      background-repeat: no-repeat;
-      background-position: center;
       opacity: 0.15;
       pointer-events: none;
     }
     header::before {
       top: 0;
-      background-image: url('data:image/svg+xml;utf8,<svg fill="%23fff" height="80" viewBox="0 0 100 20" xmlns="http://www.w3.org/2000/svg"><path d="M0 10 Q 25 0, 50 10 T 100 10" /></svg>');
+      background-image: url('data:image/svg+xml;utf8,<svg fill="%23fff" height="80" viewBox="0 0 100 20" xmlns="http://www.w3.org/2000/svg"><path d="M0 10 Q 25 0, 50 10 T 100 10"/></svg>');
     }
     footer::before {
       bottom: 0;
-      background-image: url('data:image/svg+xml;utf8,<svg fill="%23fff" height="80" viewBox="0 0 100 20" xmlns="http://www.w3.org/2000/svg"><path d="M0 10 Q 25 20, 50 10 T 100 10" /></svg>');
+      background-image: url('data:image/svg+xml;utf8,<svg fill="%23fff" height="80" viewBox="0 0 100 20" xmlns="http://www.w3.org/2000/svg"><path d="M0 10 Q 25 20, 50 10 T 100 10"/></svg>');
     }
     nav {
+      background-color: #eee6f7;
       display: flex;
       justify-content: center;
       gap: 2rem;
-      background-color: #eee6f7; /* zartes Flieder */
       padding: 1rem 0;
-      box-shadow: 0 2px 5px rgba(106,79,143,0.1);
-      position: sticky;
-      top: 0;
-      z-index: 100;
+      font-weight: 600;
     }
     nav a {
       color: #6a4f8f;
       text-decoration: none;
-      font-weight: 600;
-      font-size: 1.1rem;
       transition: color 0.3s ease;
     }
     nav a:hover {
-      color: #a389d4;
+      color: #9c7ede;
     }
     section {
       background: white;
-      margin: 20px auto;
-      padding: 25px 30px;
       max-width: 900px;
+      margin: 20px auto;
+      padding: 2rem 2.5rem;
       border-radius: 12px;
       box-shadow: 0 0 15px rgba(106, 79, 143, 0.15);
       border: 2px solid #7b5fa3;
     }
     h1, h2 {
       color: #6a4f8f;
-      margin-bottom: 15px;
-    }
-    h1 {
-      font-size: 2.5rem;
-      margin-bottom: 0.3rem;
+      margin-bottom: 1rem;
     }
     h2 {
       border-bottom: 2px solid #7b5fa3;
-      padding-bottom: 8px;
+      padding-bottom: 0.4rem;
     }
-    p {
-      margin-bottom: 1rem;
-      font-size: 1.1rem;
+    p, ul {
+      line-height: 1.5;
+      color: #4a4a4a;
     }
     ul {
-      list-style: inside disc;
-      margin-left: 1rem;
+      padding-left: 1.3rem;
     }
-    li {
+    ul li {
       margin-bottom: 0.8rem;
-      font-size: 1.05rem;
     }
-    strong {
+    .angebot strong {
       color: #7b5fa3;
-    }
-    .angebot {
-      margin-bottom: 1.8rem;
+      font-size: 1.1rem;
     }
     form label {
+      display: block;
+      margin-bottom: 0.3rem;
       font-weight: 600;
+      color: #6a4f8f;
     }
-    input[type="text"],
-    input[type="email"],
-    textarea {
+    form input, form textarea {
       width: 100%;
       padding: 0.5rem;
-      margin-top: 0.3rem;
       margin-bottom: 1rem;
-      border: 1px solid #ccc;
+      border: 1.5px solid #c8b9db;
       border-radius: 6px;
-      font-size: 1rem;
       font-family: inherit;
-      resize: vertical;
+      font-size: 1rem;
     }
-    button {
+    form button {
       background-color: #6a4f8f;
       color: white;
       border: none;
-      padding: 0.7rem 1.5rem;
-      font-size: 1.1rem;
+      padding: 0.6rem 1.3rem;
+      font-weight: 700;
+      font-size: 1rem;
       border-radius: 6px;
       cursor: pointer;
       transition: background-color 0.3s ease;
     }
-    button:hover {
-      background-color: #7b5fa3;
+    form button:hover {
+      background-color: #8c6cc7;
     }
     footer p {
       margin: 0;
       font-size: 0.9rem;
-      color: #eee;
-    }
-    /* Responsive */
-    @media (max-width: 600px) {
-      nav {
-        flex-direction: column;
-        gap: 1rem;
-      }
-      section {
-        margin: 15px 10px;
-        padding: 20px;
-      }
-      h1 {
-        font-size: 2rem;
-      }
+      color: #ddd;
     }
   </style>
 </head>
 <body>
-
   <header>
-    <h1>Deine Planerin für alle Fälle</h1>
-    <p>Ich plane – du genießt. Ob Event, Text oder Design: Alles aus einer Hand.</p>
+    <h1>Nadine S. – Deine Planerin für alle Fälle</h1>
+    <p>Mit Leidenschaft, Herz und Struktur plane ich deine Projekte – ob Event, Text, Design oder Organisation.</p>
   </header>
 
   <nav>
     <a href="#ueber">Über mich</a>
     <a href="#angebote">Was ich anbiete</a>
-    <a href="#referenzen">Referenzen</a>
     <a href="#preise">Preise</a>
+    <a href="#referenzen">Referenzen</a>
     <a href="#kontakt">Kontakt</a>
   </nav>
 
   <section id="ueber">
     <h2>Über mich</h2>
-    <p>Ich bin Nadine S., 33 Jahre, verheiratet und Mutter. Ich wohne in Witzenhausen und arbeite als Erzieherin, wo ich für Planung und Feste verantwortlich bin. Meine Leidenschaft ist das Planen und Organisieren – präzise, strukturiert, detailgetreu. Ich liebe es, mit Herz und Begeisterung Ordnung ins kreative Chaos zu bringen. Mit mir an deiner Seite wird dein Projekt zuverlässig, professionell und mit viel Freude umgesetzt.</p>
+    <p>Ich bin Nadine, 33 Jahre alt, verheiratet und Mutter. Ich wohne in Witzenhausen und arbeite als Erzieherin, wobei ich dort für Planung und Feste verantwortlich bin. Planen und Organisieren sind meine Leidenschaft – sowohl beruflich als auch privat. Ich liebe es, Dinge präzise, strukturiert und detailgetreu zu gestalten. Mit Begeisterung und Herzblut setze ich Ideen um, damit du dich entspannt zurücklehnen kannst.</p>
   </section>
 
   <section id="angebote">
     <h2>Was ich anbiete</h2>
     <div class="angebot">
       <strong>🪅 Eventplanung</strong>
-      <p>Feiern, Ausflüge, Weihnachtsfeiern oder private Events – maßgeschneidert, ideenreich und stressfrei.</p>
+      <p>Feiern, Ausflüge, Weihnachtsfeiern, Betriebsausflüge oder Kitafeste – ich organisiere deine Veranstaltungen maßgeschneidert, kreativ und stressfrei.</p>
     </div>
     <div class="angebot">
       <strong>📝 Text & Sprache</strong>
-      <p>Übersetzungen (DE/EN), Lektorat, Korrektorat oder individuelle Texte – für Website, Buch oder Bewerbung.</p>
+      <p>Übersetzungen (Deutsch & Englisch), Lektorat, Korrektorat und individuelle Texte für Websites, Bewerbungen oder Broschüren.</p>
     </div>
     <div class="angebot">
       <strong>🎨 Design & Gestaltung</strong>
-      <p>Flyer, Einladungen, Präsentationen oder Social-Media-Grafiken – modern, persönlich und auf den Punkt.</p>
+      <p>Flyer, Einladungen, Präsentationen, Social-Media-Grafiken und Canva-/PDF-Vorlagen – modern, persönlich und auf den Punkt.</p>
     </div>
     <div class="angebot">
-      <strong>📑 Dokumenten- & Organisationsservice</strong>
-      <p>Lebensläufe, Bewerbungen, Planervorlagen und digitale Organisation – maßgeschneidert für Berufseinsteiger, Freelancer und Kleinunternehmen.</p>
+      <strong>📅 Planung für Alltag & Beruf</strong>
+      <p>Waldtage, Urlaubsplanung, Elternabende, Krippenspiele, Kitafeste, Lern- und Wochenpläne – alles strukturiert und individuell abgestimmt.</p>
     </div>
-    <div class="angebot">
-      <strong>👩‍🏫 Kinder- & Lernplanung</strong>
-      <p>Wochenpläne, Kita-Material, Lernstrukturen und Projektideen für Eltern, Erzieher und Lehrer.</p>
-    </div>
-    <div class="angebot">
-      <strong>📋 Canva-/PDF-Vorlagen</strong>
-      <p>Planer, Tracker und Checklisten zum Ausdrucken – für Privatpersonen und Kleinunternehmen.</p>
-    </div>
-  </section>
-
-  <section id="referenzen">
-    <h2>Referenzen & Beispiele</h2>
-    <p>Ein kleiner Einblick in Projekte, die ich mit Leidenschaft und Organisation umgesetzt habe:</p>
-    <ul>
-      <li><strong>Sommerfest der Kita Sonnenschein:</strong> Organisation von Spielen, Verpflegung und Programm für 80 Kinder und Eltern.</li>
-      <li><strong>Weihnachtsfeier im Kindergarten „Regenbogen“:</strong> Planung, Dekoration und Ablaufkoordination mit liebevollen Details.</li>
-      <li><strong>Geburtstagsparty mit Prinzessinnen-Motto:</strong> Themenplanung, Einladungskarten und Buffetgestaltung für 14 Kinder.</li>
-      <li><strong>Text- und Layoutservice:</strong> Erstellung von Elternbriefen, Infomaterialien und Präsentationen für Bildungseinrichtungen.</li>
-      <li><strong>Individuelle Planervorlagen:</strong> Digitale Wochenplaner und To-Do-Listen für Familien und Erzieherinnen.</li>
-      <section id="angebote">
-  <h2>Was ich anbiete</h2>
-  <div class="angebot">
-    <strong>🪅 Eventplanung</strong>
-    <p>Feiern, Ausflüge, Weihnachtsfeiern oder private Events – maßgeschneidert, ideenreich und stressfrei.</p>
-  </div>
-  <div class="angebot">
-    <strong>📝 Text & Sprache</strong>
-    <p>Übersetzungen (DE/EN), Lektorat, Korrektorat oder individuelle Texte – für Website, Buch oder Bewerbung.</p>
-  </div>
-  <div class="angebot">
-    <strong>🎨 Design & Gestaltung</strong>
-    <p>Flyer, Einladungen, Präsentationen oder Social-Media-Grafiken – modern, persönlich und auf den Punkt.</p>
-  </div>
-  <div class="angebot">
-    <strong>📑 Dokumenten- & Organisationsservice</strong>
-    <p>Lebensläufe, Bewerbungen, Planervorlagen und digitale Organisation – maßgeschneidert für Berufseinsteiger, Freelancer und Kleinunternehmen.</p>
-  </div>
-  <div class="angebot">
-    <strong>👩‍🏫 Kinder- & Lernplanung</strong>
-    <p>Wochenpläne, Kita-Material, Lernstrukturen und Projektideen für Eltern, Erzieher und Lehrer.</p>
-  </div>
-  <div class="angebot">
-    <strong>🌿 Spezielle Planungen & Organisationen für Kitas und Unternehmen</strong>
-    <p>Planung von Waldtagen, Urlaubsplanung, Organisation von Elternabenden, Ausarbeitung und Inszenierung von Krippenspielen und Kitafesten, sowie Betriebsausflüge – alles zuverlässig und mit viel Liebe zum Detail.</p>
-  </div>
-  <div class="angebot">
-    <strong>📋 Canva-/PDF-Vorlagen</strong>
-    <p>Planer, Tracker und Checklisten zum Ausdrucken – für Privatpersonen und Kleinunternehmen.</p>
-  </div>
-</section>
-
-    </ul>
   </section>
 
   <section id="preise">
     <h2>Preise & Pakete</h2>
-    <p>Ich biete faire und transparente Preise, die sich an deinem individuellen Bedarf orientieren. Hier findest du eine Orientierung – individuelle Angebote sind jederzeit möglich.</p>
+    <p>Faire, transparente Preise – individuell angepasst. Hier eine Orientierung:</p>
     <ul>
-      <li>
-        <strong>Content-Planung:</strong><br/>
-        Ab 150 € für einen maßgeschneiderten Redaktionsplan (ca. 1 Monat).  
-        Social-M
+      <li><strong>Content-Planung:</strong> Ab 150 € für einen maßgeschneiderten Redaktionsplan (ca. 1 Monat). Social-Media-Strategien & Blog-Konzepte auf Anfrage.</li>
+      <li><strong>Dokumenten- & Organisationsservice:</strong> Lebenslauf/Bewerbung ab 100 €, digitale Planervorlagen ab 80 €.</li>
+      <li><strong>Kinder- & Lernplanung:</strong> Wochenpläne, Kita-Material ab 120 €, individuelle Lernstrukturen auf Anfrage.</li>
+      <li><strong>Eventplanung:</strong> Kleine Feiern & Online-Events ab 200 €, umfangreiche Firmenevents auf Anfrage.</li>
+      <li><strong>Canva-/PDF-Vorlagen:</strong> Einzeldesigns ab 50 €, Pakete & passives Einkommenskonzept auf Anfrage.</li>
+    </ul>
+    <p>Jedes Projekt ist einzigartig – kontaktiere mich gern für dein individuelles Angebot.</p>
+  </section>
+
+  <section id="referenzen">
+    <h2>Referenzen & Projekte</h2>
+    <p>Einige meiner bisherigen Projekte:</p>
+    <ul>
+      <li><strong>Waldtage für Kitas:</strong> Naturerlebnisse mit pädagogischem Fokus und liebevoller Organisation.</li>
+      <li><strong>Urlaubsplanung für Familien:</strong> Stressfreie, individuelle Reiseplanung.</li>
+      <li><strong>Elternabende:</strong> Strukturierte Abläufe und professionelle Moderation.</li>
+      <li><strong>Krippenspiele & Kitafeste:</strong> Kreative Ausarbeitung und Inszenierung.</li>
+      <li><strong>Betriebsausflüge:</strong> Team-Events, die verbinden und Spaß machen.</li>
+      <li><strong>Private Feiern & Firmenveranstaltungen:</strong> Alles aus einer Hand – von Einladungen bis Ablauf.</li>
+    </ul>
+    <p>Weitere Details und Beispiele teile ich gern auf Anfrage.</p>
+  </section>
+
+  <section id="kontakt">
+    <h2>Kontakt</h2>
+    <p>Du hast eine Idee oder ein Projekt? Schreib mir gern eine E-Mail an <a href="mailto:planerin@example.com">planerin@example.com</a> oder nutze das Kontaktformular:</p>
+    <form>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">E-Mail:</label>
+      <input type="email" id="email" name="email" required

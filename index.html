@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Deine Planerin für alle Fälle</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f6f1fa; /* helles Flieder */
+      color: #4a3f6b;
+    }
+    header, footer {
+      background-color: #7f5fa3;
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+      position: relative;
+      overflow: hidden;
+    }
+    header::before, footer::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 80px;
+      left: 0;
+      background-repeat: no-repeat;
+      background-position: center;
+      opacity: 0.15;
+      pointer-events: none;
+      z-index: 0;
+    }
+    header::before {
+      top: 0;
+      background-image: url('data:image/svg+xml;utf8,<svg fill="%23fff" height="80" viewBox="0 0 100 20" xmlns="http://www.w3.org/2000/svg"><path d="M0 10 Q 25 0, 50 10 T 100 10"/></svg>');
+    }
+    footer::before {
+      bottom: 0;
+      background-image: url('data:image/svg+xml;utf8,<svg fill="%23fff" height="80" viewBox="0 0 100 20" xmlns="http://www.w3.org/2000/svg"><path d="M0 10 Q 25 20, 50 10 T 100 10"/></svg>');
+    }
+    nav {
+      background-color: #d9cff8;
+      display: flex;
+      justify-content: center;
+      gap: 2.5rem;
+      padding: 1rem 0;
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+    nav a {
+      color: #5b3f7f;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #9f7ee0;
+    }
+    main {
+      max-width: 900px;
+      margin: 2rem auto 4rem auto;
+      padding: 0 1rem;
+    }
+    section {
+      background: white;
+      padding: 2rem 2.5rem;
+      margin-bottom: 2.5rem;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(127, 95, 163, 0.2);
+      border: 2px solid #9c85cc;
+    }
+    h1, h2 {
+      color: #7f5fa3;
+      margin-top: 0;
+    }
+    h2 {
+      border-bottom: 3px solid #bda9e1;
+      padding-bottom: 0.4rem;
+      margin-bottom: 1rem;
+    }
+    p {
+      line-height: 1.6;
+      font-size: 1.05rem;
+      color: #4a3f6b;
+    }
+    ul {
+      list-style: none;
+      padding-left: 0;
+      color: #4a3f6b;
+    }
+    ul li {
+      margin-bottom: 1rem;
+      font-size: 1rem;
+    }
+    ul li strong {
+      color: #7f5fa3;
+    }
+    .angebot {
+      margin-bottom: 1.3rem;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      max-width: 400px;
+    }
+    label {
+      font-weight: 600;
+      color: #6e5796;
+    }
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      padding: 0.5rem;
+      font-size: 1rem;
+      border-radius: 6px;
+      border: 1.5px solid #bba4db;
+      resize: vertical;
+    }
+    textarea {
+      min-height: 100px;
+    }
+    button {
+      width: fit-content;
+      background-color: #7f5fa3;
+      color: white;
+      border: none;
+      padding: 0.6rem 1.4rem;
+      border-radius: 6px;
+      font-size: 1.05rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      align-self: flex-start;
+    }
+    button:hover {
+      background-color: #6a4f8f;
+    }
+    footer p {
+      margin: 0;
+      font-size: 0.9rem;
+      color: #6a5f7e;
+    }
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        gap: 1rem;
+      }
+      main {
+        padding: 0 0.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Nadine S. – Deine Planerin für alle Fälle</h1>
+    <p>Mit Herz, Leidenschaft und Struktur plane ich Events, Texte & Designs für Erwachsene.</p>
+  </header>
+
+  <nav>
+    <a href="#ueber">Über mich</a>
+    <a href="#angebote">Was ich anbiete</a>
+    <a href="#preise">Preise</a>
+    <a href="#kontakt">Kontakt</a>
+  </nav>
+
+  <main>
+    <section id="ueber">
+      <h2>Über mich</h2>
+      <p>Ich bin Nadine, 33 Jahre alt, verheiratet und Mutter. Ich lebe in Witzenhausen und arbeite als Erzieherin, wo ich die Planung und Organisation von Festen und Veranstaltungen übernehme. Planung und Organisation sind meine große Leidenschaft – präzise, strukturiert und detailgetreu. Diese Begeisterung und Sorgfalt spürt man in jedem Projekt, das ich umsetze. Als Planerin für alles Mögliche unterstütze ich dich mit kreativen, durchdachten und professionellen Lösungen.</p>
+    </section>
+
+    <section id="angebote">
+      <h2>Was ich anbiete</h2>
+      <div class="angebot">
+        <strong>🪅 Eventplanung</strong>
+        <p>Feiern, Ausflüge, Weihnachtsfeiern oder private Events – individuell, stressfrei und ideenreich geplant.</p>
+      </div>
+      <div class="angebot">
+        <strong>📝 Text & Sprache</strong>
+        <p>Übersetzungen (DE/EN), Lektorat, Korrektorat oder individuelle Texte – für Websites, Bücher, Bewerbungen und mehr.</p>
+      </div>
+      <div class="angebot">
+        <strong>🎨 Design & Gestaltung</strong>
+        <p>Flyer, Einladungen, Präsentationen oder Social-Media-Grafiken – modern, persönlich und stilsicher.</p>
+      </div>
+      <div class="angebot">
+        <strong>📋 Organisationsservice</strong>
+        <p>Lebensläufe, Bewerbungen, Planervorlagen und digitale Organisation – klar strukturiert und ansprechend gestaltet.</p>
+      </div>
+      <div class="angebot">
+        <strong>👩‍👧 Kinder- & Lernplanung</strong>
+        <p>Wochenpläne, Kita-Materialien, Lernstrukturen und Projektideen – für Eltern, Pädagogen und Erzieher.</p>
+      </div>
+      <div class="angebot">
+        <strong>📑 Canva-/PDF-Vorlagen</strong>
+        <p>Individuelle Planer, Tracker, Checklisten und Designs – ideal zum Ausdrucken oder für digitale Nutzung.</p>
+      </div>
+    </section>
+
+    <section id="preise">
+      <h2>Preise</h2>
+      <p>Faire und transparente Preise, angepasst an deinen individuellen Bedarf. Jedes Projekt ist einzigartig – gerne erstelle ich dir ein persönliches Angebot.</p>
+      <ul>
+        <li><strong>Content-Planung:</strong> ab 150 € für einen maßgeschneiderten Redaktionsplan (ca. 1 Monat).</li>
+        <li><strong>Dokumenten- & Organisationsservice:</strong> Lebenslauf-/Bewerbungserstellung ab 100 €, digitale Planervorlagen ab 80 €.</li>
+        <li><strong>Kinder- & Lernplanung:</strong> Wochenpläne und Kita-Materialien ab 120 €.</li>
+        <li><strong>Eventplanung (Firmen & Familien):</strong> Kleine Feiern und Online-Events ab 200 €.</li>
+        <li><strong>Canva-/PDF-Vorlagen:</strong> Einzeldesigns ab 50 €.</li>
+      </ul>
+    </section>
+
+    <section id="kontakt">
+      <h2>Kontakt</h2>
+      <p>Du hast ein Projekt oder eine Idee? Schreib mir gern eine E-Mail an <a href="nadine-schischka@web.de">nadine-schischka@web.de</a> oder nutze das Kontaktformular:</p>
+      <form action="nadine-schischka@web.de" method="post" enctype="text/plain">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="Name" required />
+        
+        <label for="email">E-Mail:</label>
+        <input type="email" id="email" name="E-Mail" required />
+        
+        <label for="nachricht">Nachricht:</label>
+        <textarea id="nachricht" name="Nachricht" rows="5" required></textarea>
+        
+        <button type="submit">Senden</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Nadine S. – Deine Planerin für alle Fälle | Impressum auf Anfrage</p>
+  </footer>
+
+</body>
+</html>

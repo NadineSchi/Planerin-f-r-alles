@@ -3,76 +3,96 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Planerin für alle Fälle</title>
+  <title>Deine Planerin für alle Fälle – Über mich</title>
   <style>
-    /* Grundstyles */
     body {
-      margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #faf7fc; /* sehr helles Flieder */
-      color: #333;
-      line-height: 1.6;
+      background: #faf7fc;
+      margin: 0; padding: 0;
+      color: #3a2a59;
     }
-
-    /* Header mit Blumenranken-Hintergrund */
-    header, footer {
-      position: relative;
-      overflow: hidden;
-      background-color: #6a4f8f; /* edles dunkles Lila */
+    header, nav, footer {
+      background-color: #7f5fa3;
       color: white;
-      padding: 2rem 1rem;
       text-align: center;
+      padding: 1.5rem 1rem;
+      box-shadow: 0 3px 8px rgba(127,95,163,0.3);
     }
-
-    header::before, footer::before {
-      content: "";
-      position: absolute;
-      width: 120%;
-      height: 100px;
-      left: -10%;
-      opacity: 0.15;
-      pointer-events: none;
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: contain;
-    }
-
-    header::before {
-      top: 0;
-      background-image: url('data:image/svg+xml;utf8,<svg fill="%23ffffff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 40"><path d="M10 30 Q 50 10, 90 30 T 190 30" stroke="none" fill="none"/><text x="0" y="35" font-size="40" fill="%23ffffff" font-family="Segoe UI" opacity="0.15">❀❁❀❁</text></svg>');
-    }
-
-    footer::before {
-      bottom: 0;
-      background-image: url('data:image/svg+xml;utf8,<svg fill="%23ffffff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 40"><path d="M10 10 Q 50 30, 90 10 T 190 10" stroke="none" fill="none"/><text x="0" y="35" font-size="40" fill="%23ffffff" font-family="Segoe UI" opacity="0.15">❀❁❀❁</text></svg>');
-    }
-
-    /* Navigation */
     nav {
-      background-color: #eee6f7; /* helles Lila */
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
+      background: #d9c7f0;
       padding: 1rem 0;
-      margin-bottom: 2rem;
+      box-shadow: inset 0 -2px 4px rgba(127,95,163,0.15);
     }
-
     nav a {
-      color: #6a4f8f;
+      color: #4a2f7b;
+      margin: 0 1.25rem;
       font-weight: 600;
       text-decoration: none;
       transition: color 0.3s ease;
     }
-    nav a:hover, nav a:focus {
-      color: #9b7fd8;
-      outline: none;
+    nav a:hover {
+      color: #a87dfd;
     }
-
-    /* Sektionen */
-    section {
-      background: white;
+    main {
       max-width: 900px;
-      margin: 0 auto 2rem auto;
+      margin: 2rem auto;
+      background: white;
+      border-radius: 15px;
       padding: 2rem 2.5rem;
-      border-radius: 12px;
-      box-shadow: 0 0 15px rgba(106, 79, 143, 0.15);
+      box-shadow: 0 0 15px rgba(127, 95, 163, 0.2);
+    }
+    h1 {
+      font-weight: 700;
+      color: #5c3b8b;
+      margin-bottom: 0.2rem;
+    }
+    p {
+      line-height: 1.6;
+      font-size: 1.1rem;
+      margin-bottom: 1.2rem;
+    }
+    footer p {
+      font-size: 0.9rem;
+      color: #9c85be;
+      margin: 0;
+    }
+    /* Dekorative Blumenranken als SVG oben */
+    header::before {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 60px;
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 20" fill="%23e0d6f7"><path d="M0 10 Q 50 0, 100 10 T 200 10" stroke="%23a87dfd" stroke-width="2" fill="none"/></svg>');
+      background-repeat: no-repeat;
+      background-position: center bottom;
+      margin-bottom: 1rem;
+      opacity: 0.3;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Hallo, ich bin Nadine S.</h1>
+    <p>Deine Planerin mit Herz, Struktur & Leidenschaft</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Über mich</a>
+    <a href="angebote.html">Was ich anbiete</a>
+    <a href="preise.html">Preise</a>
+    <a href="kontakt.html">Kontakt</a>
+  </nav>
+
+  <main>
+    <h2>Über mich</h2>
+    <p>Ich bin 33 Jahre alt, verheiratet, Mutter und als Erzieherin zuständig für Planung und Organisation von Festen und Projekten – eine Aufgabe, die ich mit großer Leidenschaft ausfülle.</p>
+    <p>Planen und Organisieren ist für mich weit mehr als nur ein Job: Es ist eine Berufung, die ich mit Herz, Struktur und einem Auge fürs Detail lebe. Mit Präzision und Begeisterung gestalte ich Abläufe und Veranstaltungen, die Spaß machen und reibungslos funktionieren.</p>
+    <p>Auch privat liebe ich es, Dinge klar und übersichtlich zu ordnen und kreativ zu gestalten – immer mit dem Ziel, dass alles einfach und stressfrei gelingt.</p>
+    <p>Ich freue mich darauf, deine Projekte mit professioneller Planung und echter Begeisterung zu unterstützen!</p>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Nadine S. – Deine Planerin für alle Fälle</p>
+  </footer>
+</body>
+</html>

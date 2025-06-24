@@ -10,7 +10,77 @@
       font-family: 'Segoe UI', sans-serif;
       background-color: #f9f7fc;
       color: #333;
-    }
+    }body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  background: #faf7fc; /* sehr helles Flieder für den Seitenhintergrund */
+  margin: 0;
+  padding: 0;
+}
+
+header, footer {
+  background-color: #6a4f8f; /* edles dunkles Lila */
+  color: white;
+  padding: 20px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Blumenranken als SVG-Hintergrund im Header */
+header::before, footer::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 80px;
+  left: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.2;
+  pointer-events: none;
+}
+
+header::before {
+  top: 0;
+  background-image: url('data:image/svg+xml;utf8,<svg fill="%23fff" height="80" viewBox="0 0 100 20" xmlns="http://www.w3.org/2000/svg"><path d="M0 10 Q 25 0, 50 10 T 100 10" /></svg>');
+}
+
+footer::before {
+  bottom: 0;
+  background-image: url('data:image/svg+xml;utf8,<svg fill="%23fff" height="80" viewBox="0 0 100 20" xmlns="http://www.w3.org/2000/svg"><path d="M0 10 Q 25 20, 50 10 T 100 10" /></svg>');
+}
+
+/* Sektionen mit leichtem Rahmen und abgerundeten Ecken */
+section {
+  background: white;
+  margin: 20px auto;
+  padding: 25px 30px;
+  max-width: 900px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(106, 79, 143, 0.2);
+  border: 2px solid #7b5fa3;
+}
+
+/* Links und Menüpunkte */
+nav a {
+  color: #e0d6f7;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #d2b1ff;
+}
+
+/* Überschriften */
+h2 {
+  color: #6a4f8f;
+  border-bottom: 2px solid #7b5fa3;
+  padding-bottom: 8px;
+  margin-bottom: 18px;
+}
+
     header {
       background-color: #7f5fa3;
       color: white;

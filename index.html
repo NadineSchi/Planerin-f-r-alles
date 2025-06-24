@@ -8,49 +8,30 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #faf7fc; /* sehr helles Flieder */
+      background-color: #faf7fc;
       color: #333;
       line-height: 1.6;
     }
     header, footer {
-      background-color: #6a4f8f; /* edles dunkles Lila */
+      background-color: #6a4f8f;
       color: white;
       padding: 25px 20px;
       text-align: center;
+      font-weight: 600;
       position: relative;
       overflow: hidden;
-      font-weight: 600;
     }
-    /* Blumenranken als SVG-Hintergrund im Header & Footer */
-    header::before, footer::before {
-      content: "";
-      position: absolute;
-      width: 100%;
-      height: 80px;
-      left: 0;
-      background-repeat: no-repeat;
-      background-position: center;
-      opacity: 0.15;
-      pointer-events: none;
-      z-index: 0;
-    }
-    header::before {
-      top: 0;
-      background-image: url('data:image/svg+xml;utf8,<svg fill="%23fff" height="80" viewBox="0 0 100 20" xmlns="http://www.w3.org/2000/svg"><path d="M0 10 Q 25 0, 50 10 T 100 10" /></svg>');
-    }
-    footer::before {
-      bottom: 0;
-      background-image: url('data:image/svg+xml;utf8,<svg fill="%23fff" height="80" viewBox="0 0 100 20" xmlns="http://www.w3.org/2000/svg"><path d="M0 10 Q 25 20, 50 10 T 100 10" /></svg>');
-    }
-
     nav {
-      background-color: #d9cff8; /* helles Lila */
+      background-color: #d9cff8;
       display: flex;
       justify-content: center;
       gap: 2.5rem;
       padding: 1rem 0;
       font-weight: 600;
       box-shadow: 0 2px 8px rgba(106, 79, 143, 0.15);
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
     nav a {
       color: #5a3f8f;
@@ -61,7 +42,6 @@
     nav a:hover {
       color: #7e61c6;
     }
-
     section {
       background: white;
       max-width: 900px;
@@ -70,7 +50,6 @@
       border-radius: 14px;
       box-shadow: 0 0 20px rgba(127, 95, 163, 0.15);
     }
-
     h1, h2, h3 {
       color: #6a4f8f;
       margin-bottom: 1rem;
@@ -78,8 +57,6 @@
     h1 {
       font-size: 2.5rem;
       font-weight: 700;
-      position: relative;
-      z-index: 1;
     }
     h2 {
       border-bottom: 3px solid #9e84cc;
@@ -91,13 +68,11 @@
       margin-bottom: 0.8rem;
       font-weight: 700;
     }
-
     p {
       font-size: 1.1rem;
       color: #444;
       margin-bottom: 1rem;
     }
-
     .angebot {
       margin-bottom: 1.8rem;
       font-size: 1.1rem;
@@ -109,8 +84,6 @@
       margin-bottom: 6px;
       font-size: 1.2rem;
     }
-
-    /* Preissektion */
     #preise .paket {
       background: #f0e9fc;
       border: 2px solid #a084c9;
@@ -137,8 +110,6 @@
       font-size: 1rem;
       color: #4a3f67;
     }
-
-    /* Kontaktformular */
     form label {
       font-weight: 600;
       margin-top: 12px;
@@ -180,13 +151,11 @@
     form button:hover {
       background-color: #5e3d8a;
     }
-
     footer p {
       margin: 0;
       font-size: 0.9rem;
       color: #ddd;
     }
-
     @media (max-width: 600px) {
       nav {
         flex-direction: column;
@@ -216,7 +185,100 @@
     <a href="#kontakt">Kontakt</a>
   </nav>
 
-  <!-- Über mich -->
   <section id="ueber">
     <h2>Über mich</h2>
-    <p>Ich bin Nadine S., 33 Jahre, verheiratet, Mutter und Erzieherin aus Witzenhausen. In meinem Beruf bin ich für Planung und Feste verantwortlich – und das mit großer Leidenschaft! Auch privat liebe ich es, strukturiert, präzise und detailgetre
+    <p>Ich bin Nadine S., 33 Jahre, verheiratet, Mutter und Erzieherin aus Witzenhausen. In meinem Beruf bin ich für Planung und Feste verantwortlich – und das mit großer Leidenschaft!</p>
+    <p>Auch privat liebe ich es, strukturiert, präzise und detailgetreu zu organisieren. Planen und Organisieren ist für mich nicht nur Aufgabe, sondern echtes Hobby und Berufung. Meine Begeisterung dafür möchte ich an dich weitergeben, um deine Projekte und Events einzigartig, entspannt und erfolgreich zu machen.</p>
+  </section>
+
+  <section id="angebote">
+    <h2>Was ich anbiete</h2>
+    <div class="angebot">
+      <strong>🪅 Eventplanung</strong>
+      <p>Ob private Feiern, Dienstagsausflüge, Weihnachtsfeiern oder Firmenevents – ich entwickle maßgeschneiderte Konzepte, organisiere den Ablauf und sorge für einen stressfreien, reibungslosen Ablauf.</p>
+    </div>
+    <div class="angebot">
+      <strong>📝 Text & Sprache</strong>
+      <p>Übersetzungen (Deutsch & Englisch), Korrektorat, Lektorat und kreatives Schreiben – perfekt für Website, Bewerbung, Blog oder Broschüren.</p>
+    </div>
+    <div class="angebot">
+      <strong>🎨 Design & Gestaltung</strong>
+      <p>Flyer, Einladungen, Social-Media-Grafiken und Präsentationen – individuell, modern und passend zu deinem Stil.</p>
+    </div>
+    <div class="angebot">
+      <strong>📋 Dokumenten- & Organisationsservice</strong>
+      <p>Professionelle Lebensläufe, Bewerbungen, Planervorlagen und digitale Organisation – für Berufseinsteiger, Freelancer und kleine Unternehmen.</p>
+    </div>
+    <div class="angebot">
+      <strong>👶 Kinder- & Lernplanung</strong>
+      <p>Wochenpläne, Kita-Materialien und Lernstrukturen – ideal für Eltern, Pädagogen und Erzieher, die Strukturen suchen, die funktionieren.</p>
+    </div>
+  </section>
+
+  <section id="preise">
+    <h2>Preise</h2>
+
+    <div class="paket">
+      <h3>Basis-Paket</h3>
+      <p>Ideal für kleine Projekte und Einsteiger</p>
+      <ul>
+        <li>Beratung & Erstplanung (bis 2 Stunden)</li>
+        <li>1 Konzeptvorschlag</li>
+        <li>Telefonische Nachbesprechung</li>
+      </ul>
+      <p><strong>Preis: 120 €</strong></p>
+    </div>
+
+    <div class="paket">
+      <h3>Standard-Paket</h3>
+      <p>Für mittlere Events oder umfangreichere Organisation</p>
+      <ul>
+        <li>Umfassende Planung & Organisation (bis 6 Stunden)</li>
+        <li>Mehrere Konzepte & Anpassungen</li>
+        <li>Begleitung vor Ort (optional)</li>
+        <li>Kommunikation mit Dienstleistern</li>
+      </ul>
+      <p><strong>Preis: 350 €</strong></p>
+    </div>
+
+    <div class="paket">
+      <h3>Premium-Paket</h3>
+      <p>Rundum-sorglos-Paket für große Events</p>
+      <ul>
+        <li>Unbegrenzte Planung & Organisation</li>
+        <li>Persönliche Betreuung vor Ort</li>
+        <li>Design & Textgestaltung inklusive</li>
+        <li>Nachbereitung & Feedback</li>
+      </ul>
+      <p><strong>Preis: auf Anfrage</strong></p>
+    </div>
+
+    <p>Individuelle Pakete und Preise sind auf Anfrage möglich – ich erstelle dir gern ein maßgeschneidertes Angebot!</p>
+  </section>
+
+  <section id="kontakt">
+    <h2>Kontakt</h2>
+    <p>Ich freue mich auf deine Nachricht! Nutze gerne das Kontaktformular oder schreibe mir direkt per E-Mail.</p>
+
+    <form action="mailto:deine.email@domain.de" method="post" enctype="text/plain" onsubmit="alert('Vielen Dank für deine Nachricht! Ich melde mich bald zurück.');">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="Name" required />
+
+      <label for="email">E-Mail</label>
+      <input type="email" id="email" name="E-Mail" required />
+
+      <label for="nachricht">Nachricht</label>
+      <textarea id="nachricht" name="Nachricht" rows="5" required></textarea>
+
+      <button type="submit">Nachricht senden</button>
+    </form>
+
+    <p>Oder schreib mir direkt an: <a href="mailto:deine.email@domain.de">deine.email@domain.de</a></p>
+  </section>
+
+  <footer>
+    <p>© 2025 Nadine S. – Alle Rechte vorbehalten</p>
+  </footer>
+
+</body>
+</html>
